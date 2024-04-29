@@ -1,0 +1,32 @@
+img:hover{
+transform: scale(1.1);
+}
+img{
+    transition: 1.2s;
+}
+.col{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    /* border: solid green; */
+    /* margin: 1px; */
+    width: calc();
+}
+#Bottom{
+ transition: 1.3s;
+ position: relative;
+}
+#Bottom::before{
+    content: ' ';
+    display: inline-block;
+    position: absolute;
+    bottom: 0px;
+    border: solid #fff;
+    width: 30px;
+    /* width: 70px; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+    #Bottom:hover #Bottom::before{
+        display: none;
+    }
+
