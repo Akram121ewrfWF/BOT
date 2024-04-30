@@ -2,7 +2,7 @@ img:hover{
 transform: scale(1.1);
 }
 img{
-    transition: 1.2s;
+    transition: 1.1s;
 }
 .col{
     margin-top: 8px;
@@ -11,22 +11,51 @@ img{
     /* margin: 1px; */
     width: calc();
 }
-#Bottom{
- transition: 1.3s;
- position: relative;
+#NAV{
+    transition: 1.3s;
+    position: relative;
 }
-#Bottom::before{
+#NAV::before{
     content: ' ';
     display: inline-block;
     position: absolute;
     bottom: 0px;
-    border: solid #fff;
-    width: 30px;
+    border: solid #ff0;
+    width: 0px;
+    visibility: hidden;
     /* width: 70px; */
-    left: 50%;
     transform: translate(-50%, -50%);
+    left: 50%;
 }
-    #Bottom:hover #Bottom::before{
-        display: none;
-    }
+#NAV:hover  > #NAV::before{
+    visibility: visible;
+    width: 30px;   
+}
+#HO{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+#NAV + span{
+    left: 30px;
+    bottom: -10px;
+}
+span{
+    content: '';
+    color:#FFF;
+    transition: 0.5s;
+    display: inline-block;
+    position: absolute;
+    bottom: -5px;
+    border: solid #fff thin;
+    width: 0px;
+    visibility: hidden;
+    /* width: 70px; */
+    transform: translate(-50%, -50%);
+    left: 50%;    
+}
+div#HO:hover span{
+    width: 50px;
+    visibility: visible;
+}
 
